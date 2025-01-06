@@ -3,13 +3,21 @@ name: Run Tests
 on: [pull_request, workflow_dispatch]
 
 jobs:
-  test_python38:
-    secrets: inherit
-    uses: ./.github/workflows/run_tests_linux.yml
-    with:
-      python-version: "3.8"
-  test_python312:
-    secrets: inherit
-    uses: ./.github/workflows/run_tests_linux.yml
-    with:
-      python-version: "3.12"
+  test:
+    name: Run Tests for python
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+      - name: Install poetry
+        shell: bash
+        run: pipx install poetry
+      - name: Install dependencies
+        run: poetry install --with dev
+      - name: Run Lint and Format
+        run: poetry run ruff check
+      - name: Run Pytest
+        run: poetry run pytest
