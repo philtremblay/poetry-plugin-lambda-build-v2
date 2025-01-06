@@ -1,3 +1,7 @@
+# Poetry Plugin Lambda Build v2
+Fixes the GroupNotFound module not found error when using the plugin with poetry v2
+
+From Forked repo:
 # Poetry Plugin Lambda Build
 
 The plugin for poetry that allows you to build zip packages suited for serverless deployment like AWS Lambda, Google App Engine, Azure App Service, and more...
