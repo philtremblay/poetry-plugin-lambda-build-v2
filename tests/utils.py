@@ -5,7 +5,7 @@ import zipfile
 import subprocess
 from logging import Logger
 import sys
-from poetry_plugin_lambda_build.utils import run_cmd, remove_prefix
+from poetry_plugin_lambda_build_v2.utils import run_cmd, remove_prefix
 
 
 def run_python_cmd(

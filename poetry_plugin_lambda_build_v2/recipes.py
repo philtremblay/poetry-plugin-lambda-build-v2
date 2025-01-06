@@ -9,7 +9,7 @@ from tempfile import TemporaryDirectory
 
 from poetry.console.commands.command import Command
 
-from poetry_plugin_lambda_build.commands import (
+from poetry_plugin_lambda_build_v2.commands import (
     INSTALL_CMD_TMPL,
     INSTALL_DEPS_CMD_IN_CONTAINER_TMPL,
     INSTALL_DEPS_CMD_TMPL,
@@ -17,23 +17,23 @@ from poetry_plugin_lambda_build.commands import (
     INSTALL_IN_CONTAINER_NO_DEPS_CMD_TMPL,
     INSTALL_NO_DEPS_CMD_TMPL,
 )
-from poetry_plugin_lambda_build.docker import (
+from poetry_plugin_lambda_build_v2.docker import (
     copy_from_container,
     copy_to_container,
     exec_run_container,
     run_container,
 )
-from poetry_plugin_lambda_build.parameters import ParametersContainer
-from poetry_plugin_lambda_build.requirements import RequirementsExporter
-from poetry_plugin_lambda_build.utils import (
+from poetry_plugin_lambda_build_v2.parameters import ParametersContainer
+from poetry_plugin_lambda_build_v2.requirements import RequirementsExporter
+from poetry_plugin_lambda_build_v2.utils import (
     format_cmd,
     mask_string,
     remove_suffix,
     run_cmds,
     join_cmds,
 )
-from poetry_plugin_lambda_build.zip import create_zip_package
-from poetry_plugin_lambda_build.utils import compute_checksum
+from poetry_plugin_lambda_build_v2.zip import create_zip_package
+from poetry_plugin_lambda_build_v2.utils import compute_checksum
 
 CONTAINER_CACHE_DIR = "/opt/lambda/cache"
 CURRENT_WORK_DIR = os.getcwd()

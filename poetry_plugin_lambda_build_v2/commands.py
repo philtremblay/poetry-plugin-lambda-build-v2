@@ -1,6 +1,6 @@
 import shlex
 
-from poetry_plugin_lambda_build.utils import join_cmds
+from poetry_plugin_lambda_build_v2.utils import join_cmds
 
 MKDIR = shlex.split("mkdir -p {output_dir}")
 INSTALL_DEPS_CMD_TMPL = shlex.split(

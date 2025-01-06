@@ -7,8 +7,8 @@ from cleo.helpers import argument, option
 from poetry.console.commands.env_command import EnvCommand
 from poetry.plugins.application_plugin import ApplicationPlugin
 
-from poetry_plugin_lambda_build.parameters import ParametersContainer
-from poetry_plugin_lambda_build.recipes import Builder
+from poetry_plugin_lambda_build_v2.parameters import ParametersContainer
+from poetry_plugin_lambda_build_v2.recipes import Builder
 
 
 class BuildLambdaCommand(EnvCommand):

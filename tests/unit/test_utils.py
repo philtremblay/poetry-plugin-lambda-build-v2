@@ -1,4 +1,4 @@
-from poetry_plugin_lambda_build.utils import format_cmd, join_cmds
+from poetry_plugin_lambda_build_v2.utils import format_cmd, join_cmds
 
 
 def test_join_cmds():

@@ -9,7 +9,7 @@ from typing import Generator
 import docker
 from docker.models.containers import Container
 
-from poetry_plugin_lambda_build.utils import cd, cmd_split
+from poetry_plugin_lambda_build_v2.utils import cd, cmd_split
 
 
 def _parse_str_to_list(value: str) -> list[str]:

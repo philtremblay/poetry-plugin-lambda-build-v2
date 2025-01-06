@@ -5,7 +5,7 @@ from typing import Any
 
 from poetry.console.exceptions import PoetryConsoleError
 
-from poetry_plugin_lambda_build.utils import remove_prefix
+from poetry_plugin_lambda_build_v2.utils import remove_prefix
 
 
 def comma_separated_collection(x: str) -> list[str]:

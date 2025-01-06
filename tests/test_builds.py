@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from poetry_plugin_lambda_build.utils import cd
+from poetry_plugin_lambda_build_v2.utils import cd
 from tests.utils import (
     assert_file_exists_in_dir,
     assert_file_exists_in_zip,
